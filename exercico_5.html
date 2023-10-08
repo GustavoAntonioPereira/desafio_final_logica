@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 5:</h1>
+    <p>5.	Escrever um algoritmo que solicite ao usuário que digite três números inteiros 
+        e imprime qual é o menor deles e também a média destes números.</p>
+
+
+    <div>
+        <script>
+            let num1 = parseInt(prompt("Digite o primeiro numero :"));
+            let num2 = parseInt(prompt("Digite o segundo numero :"));
+            let num3 =parseInt(prompt("Digite o terceiro numero :"));
+            let media = (num1 + num2 + num3) / 3;
+            let menorNumero = (num1 < num2) ? ((num1 < num3) ? num1 : num3) : ((num2 < num3) ? num2 : num3);
+            alert("O menor numero é : " + menorNumero + " e a media é : " + media);
+        </script>
+    </div>
+
+</body>
+
+</html>

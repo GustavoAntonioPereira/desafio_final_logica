@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>6. Escrever um algoritmo que lê a quantidade informada de pessoas que não estão sendo monitoradas
+        no posto de saúde. Para cada pessoa é anotada o peso e a altura (em metros), que é fornecida pelo
+        usuário, sendo que o peso igual a zero informa o final da leitura. Calcule e escreva:
+        a. A maior altura informada,
+        b. A menor altura informada,
+        c. A média dos pesos informados.
+    </p>
+
+
+    <script>
+        let quantidadePessoas = +prompt("Digite a quantidade de pessoas a serem monitoradas:");
+        let maiorAltura = 0;
+        let menorAltura = 0; 
+        let somaPesos = 0;
+
+        for (let i = 1; i <= quantidadePessoas; i++) {
+            let peso = +prompt("Digite o peso da pessoa (em kg):");
+            let altura = +prompt("Digite a altura da pessoa (em metros):");
+
+
+            if (peso === 0) {
+                alert("Peso inválido. Digite um valor diferente de zero.");
+                break;
+            }
+
+            if (altura > maiorAltura) {
+                maiorAltura = altura;
+            }
+
+
+            if (i === 1) {
+                menorAltura = altura;
+            } else if (altura < menorAltura) {
+                menorAltura = altura;
+            }
+
+            somaPesos += peso;
+        }
+
+        if (quantidadePessoas > 0) {
+            let mediaPesos = somaPesos / quantidadePessoas;
+
+            alert("Maior altura informada: " + maiorAltura.toFixed(2) + " metros");
+            alert("Menor altura informada: " + menorAltura.toFixed(2) + " metros");
+            alert("Média dos pesos informados: " + mediaPesos.toFixed(2) + " kg");
+        } else {
+            alert("Nenhum dado foi inserido.");
+        }
+
+    </script>
+</body>
+
+</html>

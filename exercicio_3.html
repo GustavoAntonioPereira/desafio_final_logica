@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 3:</h1>
+    <p>3.	Escreva um algoritmo que leia duas notas do aluno (n1 e n2)
+        e calcule a média aritmética.
+        Exibir a situação do aluno (aprovado ou reprovado),
+        sendo que o aluno somente é aprovado quando a média é maior ou igual a 6.</p>
+
+
+    <div>
+        <script>
+            let n1 = +prompt("Digite a primeira nota do aluno :");
+            let n2 = +prompt("Digite segunda nota do aluno:");
+            let media = (n1 + n2) / 2;
+            if (media >= 6) {
+                alert("Parabens! O aluno foi aprovado com a media : " + media)
+            }
+            else {
+                alert("Infelizmente o aluno foi reprovado com a media : " + media)
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

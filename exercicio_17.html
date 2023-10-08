@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>7. Escrever um algoritmo que lê cinco números inteiros, um de cada vez,
+        armazena os números lidos em um vetor e a partir da leitura do vetor imprime
+        qual é o maior e o menor dos números lidos e também a soma dos números lidos.</p>
+
+
+    <script>
+        let numeros = [];
+
+        for (let i = 1; i <= 5; i++) {
+            let numero = parseInt(prompt("Digite um número pela " + i + "ª vez:"));
+            numeros.push(numero);
+        }
+
+        let maiorNumero = numeros[0];
+        let menorNumero = numeros[0];
+        let soma = 0;
+
+        for (let j = 0; j < numeros.length; j++) {
+            let numero = numeros[j];
+
+            if (numero > maiorNumero) {
+                maiorNumero = numero;
+            }
+
+            if (numero < menorNumero) {
+                menorNumero = numero;
+            }
+
+            soma += numero;
+        }
+
+        alert("O maior número foi: " + maiorNumero+
+            "\nO menor número foi: " + menorNumero+
+            "\nA soma dos números é: " + soma);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>4. Escreva um algoritmo que permita que o professor digite as notas da 1a. e 2a. avaliações de vários alunos
+        , um aluno de cada vez. calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos
+        durante a leitura (0 a 10) para cada nota. Após apresentar a media calculada,
+        o algoritmo deverá perguntar se o professor deseja continuar calculando a media para outros alunos.
+        Se a resposta for ‘SIM’, o algoritmo continua, caso contrário, o algoritmo finaliza.</p>
+
+
+    <script>
+        let continuar = "SIM";
+
+        while (continuar === "SIM") {
+            let nota1, nota2;
+
+
+            nota1 = +prompt("Digite a nota da 1ª avaliação (entre 0 e 10):");
+            nota2 = +prompt("Digite a nota da 2ª avaliação (entre 0 e 10):");
+
+            if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
+                let media = (nota1 + nota2) / 2;
+
+                alert("A média do aluno é: " + media.toFixed(2));
+            } else {
+                alert("Notas inválidas. As notas devem ser entre 0 e 10.");
+            }
+            continuar = prompt("Deseja calcular a média de outro aluno? \n" +
+            "(Digite 'SIM' para continuar, 'NÃO' para sair)").toUpperCase();
+        }
+
+    </script>
+</body>
+
+</html>

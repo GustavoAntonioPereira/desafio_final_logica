@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 6:</h1>
+    <p>6.	Escreva um algoritmo que solicite ao usuário que digite dois valores inteiros 
+        e imprime o resultado para as quatro operações 
+        básicas (soma, subtração, divisão e multiplicação).</p>
+
+
+    <div>
+        <script>
+            let num1 = parseInt(prompt("Digite o primeiro numero :"));
+            let num2 = parseInt(prompt("Digite o segundo numero :"));
+            let operação = +prompt("escolha uma operação: 1.soma, 2.subtração, 3.divisão, 4.multiplicação");
+switch(operação){
+    case 1:
+        alert("O resultado da soma é: " + (num1 + num2));
+        break;
+    case 2:
+        alert("O resultado da subtração é: " + (num1 - num2));
+        break;
+    case 3:
+        alert("O resultado da divisão é: " + (num1 / num2));
+        break;
+    case 4:
+        alert("O resultado da multiplicação é: " + (num1 * num2));
+        break;
+    default:
+        alert("Operação Invalida");
+}
+
+        </script>
+    </div>
+
+</body>
+
+</html>

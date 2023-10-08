@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>
+        10. Escrever um algoritmo que lê uma quantidade informada inicialmente de
+        notas de alunos da disciplina de Lógica. Para cada aluno são lidas quatro
+        (4) notas variando de zero (0) a dez (10). Para ser aprovado o aluno
+        necessita de média igual ou superior a seis (6). Ler as notas, calcular a
+        média e armazenar em uma matriz (Vetor bidimensional). Considere o índice
+        da linha da matriz como o número do aluno na chamada. Após o cálculo da
+        média, ler os dados e escrever: “O Aluno y foi Aprovado (ou Reprovado) com
+        média x,xx”. No final informar: a. quantos alunos foram aprovados, b.
+        quantos alunos foram reprovados, c. qual a porcentagem de alunos
+        aprovados.
+    </p>
+
+    <script>
+
+        let quantidadeAlunos = +prompt("Digite quantos alunos deseja calcular a média:");
+        let notasAlunos = [];
+        let aprovados = 0;
+        let reprovados = 0;
+
+        for (let i = 0; i < quantidadeAlunos; i++) {
+            let notas = [];
+            let soma = 0;
+
+            for (let j = 0; j < 4; j++) {
+                let nota;
+
+                
+                do {
+                    nota = +prompt("Digite a nota " + (j + 1) + " do aluno " + (i + 1) + ":");
+                    if (nota < 0 || nota > 10) {
+                        alert("Nota inválida. A nota deve estar entre 0 e 10.");
+                    }
+                } while (nota < 0 || nota > 10);
+
+                notas.push(nota);
+                soma += nota;
+            }
+
+            let media = soma / 4;
+            notas.push(media);
+            notasAlunos.push(notas);
+
+            if (media >= 6) {
+                aprovados++;
+                alert("O Aluno " + (i + 1) + " foi Aprovado com média " + media.toFixed(2));
+            } else {
+                reprovados++;
+                alert("O Aluno " + (i + 1) + " foi Reprovado com média " + media.toFixed(2));
+            }
+        }
+
+
+        let porcentagemAprovados = (aprovados / quantidadeAlunos) * 100;
+
+        alert("Quantidade de alunos aprovados: " + aprovados +
+            "\nQuantidade de alunos reprovados: " + reprovados +
+            "\nPorcentagem de alunos aprovados: " + porcentagemAprovados.toFixed(2) + "%");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>2. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês,
+        mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas.
+        Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas,
+        o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor</p>
+
+
+    <script>
+
+        let salarioFixo = +prompt("Digite um valor (em reais R$) do salario fixo de um vendedor de carros:");
+        let numCarrosVendidos = +prompt("Digite o número de carros vendidos:");
+        let valorComissaoPorCarro = +prompt("Digite um valor (em reais R$) de uma comissão por carro vendido:");
+        let valorTotalVendas = +prompt("Digite o valor total de suas vendas:");
+
+        let comissaoCarros = numCarrosVendidos * valorComissaoPorCarro;
+        let comissaoVendas = 0.05 * valorTotalVendas;
+        let salarioFinal = salarioFixo + comissaoCarros + comissaoVendas;
+
+        alert("O salário final do vendedor é: R$" + salarioFinal.toFixed(2));
+
+    </script>
+</body>
+
+</html>

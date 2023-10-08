@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Final Logica de Programação</title>
+</head>
+
+<body>
+    <p>8. Escreva um algoritmo que permita a leitura dos nomes de 10 pessoas e armazene-os nomes lidos em um vetor.
+        Após isto, o algoritmo deve permitir a leitura de mais 1 nome qualquer de pessoa e depois escrever a mensagem
+        ACHEI, se o nome estiver entre os 10 nomes lidos anteriormente (guardados no vetor),
+        ou NÃO ACHEI caso contrário.</p>
+
+
+    <script>
+
+        let nomes = [];
+
+        for (let i = 1; i <= 10; i++) {
+            let nome = prompt("Digite o nome da " + i + "ª pessoa:").toUpperCase();
+            nomes.push(nome);
+        }
+
+        let nomeVerificado = prompt("Digite um nome para procurar entre os 10 nomes escritos anteriormente:").toUpperCase();
+
+        let nomeEncontrado = "";
+        for (let j = 0; j < nomes.length; j++) {
+            if (nomes[j] === nomeVerificado) {
+                nomeEncontrado = nomeVerificado;
+                break;
+            }
+        }
+
+        if (nomeEncontrado) {
+            alert("ACHEI o nome :" + nomeEncontrado);
+        } else {
+            alert("NÃO ACHEI " + nomeVerificado);
+        }
+
+    </script>
+</body>
+
+</html>

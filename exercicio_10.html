@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 10:</h1>
+    <p>10.	Em uma loja, a política de promoções consiste em dar um “desconto relâmpago” 
+        algum produto da loja. O valor durante a promoção é o menor valor entre:
+        a.	Preço anterior;
+        b.	Preço atual com desconto de 10%;
+        c.	Média do preço atual e do preço anterior com desconto de 10%.
+        O preço atual é o preço praticado no momento e o preço anterior é o preço praticado 
+        antes do último reajuste. Exemplos: 
+        a.	para um último preço praticado de R$ 10,00, preço atual de R$ 12,00, 
+        tem-se como opções R$ 10,00 (anterior), R$ 10,80 (atual com 10%) 
+        e R$ 9,90 (média com 10%), sendo o menor R$ 9,90;
+        b.	para preço anterior R$ 10,00 e preço atual R$ 14,00, as opções são 
+        R$ 10,00 (anterior), R$ 12,60 (atual com 10%) e R$ 10,80 (média com 10%), 
+        sendo o menor R$ 10,00).
+        Desenvolva um algoritmo que, a partir do preço anterior e do preço atual de um produto, 
+        escreva qual seu valor durante a promoção, dadas as regras acima. 
+        Assume que sempre os dados digitados serão corretos, isto é, todos os valores 
+        maiores que zero.</p>
+
+
+    <div>
+        <script>
+
+
+let precoAnterior = parseFloat(prompt("Digite o preço anterior do produto:"));
+let precoAtualComDesconto = parseFloat(prompt("Digite o preço atual com desconto:"));
+
+let opcao1 = precoAnterior;
+let opcao2 = precoAtualComDesconto * 0.9; 
+let opcao3 = ((precoAtualComDesconto + precoAnterior) * 0.9) / 2; 
+
+
+let menorPreco = (opcao1 < opcao2) ? ((opcao1 < opcao3) ? opcao1 : opcao3) : ((opcao2 < opcao3) ? opcao2 : opcao3);
+
+
+alert("O Preço Promocional é : R$" + menorPreco.toFixed(2));
+
+
+        </script>
+    </div>
+
+</body>
+
+</html>

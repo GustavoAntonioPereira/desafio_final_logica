@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 1</h1>
+<p>1.	Escreva um algoritmo que solicite que o usuário digite um número. 
+    Se o número digitado pelo usuário for positivo armazene-o em uma variável A, 
+    se for negativo, armazene-o em uma variável B. No final mostrar o resultado.</p>
+
+
+    <div>
+        <script>
+            
+// variavel aonde o usuario digita um numero !!!
+let num=+prompt("Digite um numero para saber se ele é positivo ou negativo:");
+// variavel A vai ser aonde vai armazenar o numero par !!!
+let a="";
+// variavel B vai ser aonde vai armazenar o numero impar !!!
+let b="";
+
+if(num>0){
+    a=num
+    alert("o numero : " + a + " é Positivo!")
+}
+else if(num<0){
+    b=num
+    alert("O numero: " + b + " é Negativo!")
+}else{
+    alert("VOCE DIGITOU 0 OU UM VALOR INVALIDO !!!")
+}
+        </script>
+    </div>
+
+</body>
+
+</html>

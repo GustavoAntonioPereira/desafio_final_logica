@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Parcial Logica de Programação</title>
+</head>
+
+<body>
+
+    <h1>Exercico 8:</h1>
+    <p>8.	A empresa de fornecimento de energia elétrica da sua cidade disponibilizou 
+        a tabela de consumo de energia elétrica em Kwh. Escreva um algoritmo 
+        para calcular a conta de energia elétrica de um estabelecimento, 
+        considerando a seguinte tabela de valores disponibilizada: <br>
+        Consumo em Kwh até 300 = 1,25 <br>
+        consumo em Kwh de 301 até 600 = 1,50 <br>
+        Consumo em Kwh de 601 até 1000 = 1,75 <br>
+        Consumo em Kwh acima de 1000 =2,00 <br>
+        
+    </p>
+
+
+    <div>
+        <script>
+
+let consumoDeEnergia = parseFloat(prompt("Digite seu consumo de energia em KWh:"));
+let valorDaConta = 0;
+
+if (consumoDeEnergia <= 300) {
+  valorDaConta = consumoDeEnergia * 1.25;
+} else if (consumoDeEnergia <= 600) {
+  valorDaConta = consumoDeEnergia * 1.5;
+} else if (consumoDeEnergia <= 1000) {
+  valorDaConta = consumoDeEnergia * 1.75;
+} else {
+    valorDaConta = consumoDeEnergia * 2.0;
+}
+
+alert("O Valor da sua Conta è: R$" + valorDaConta.toFixed(2));
+
+        </script>
+    </div>
+
+</body>
+
+</html>
